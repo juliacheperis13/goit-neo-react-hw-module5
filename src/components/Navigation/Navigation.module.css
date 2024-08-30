@@ -1,0 +1,13 @@
+.navigation {
+  display: flex;
+  gap: 25px;
+}
+
+.navigationLink {
+  color: #757474;
+}
+
+.active {
+  color: #fff;
+} 
+

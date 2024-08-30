@@ -1,0 +1,11 @@
+.searchForm {
+  display: flex;
+  justify-content: center;
+}
+
+.searchButton {
+  display: flex;
+  align-items: center;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
