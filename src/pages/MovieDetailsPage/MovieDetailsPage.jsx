@@ -11,7 +11,7 @@ const MovieDetails = lazy(() =>
 const MovieDetailsPage = () => {
   const location = useLocation();
   const { movieId } = useParams();
-  const backLinkHref = location.state ?? "/movies";
+  const backLinkHref = useRef(location.state ?? "/movies");
 
   const [movieDetails, setMovieDetails] = useState(null);
   const [isError, setIsError] = useState(false);
@@ -35,9 +35,7 @@ const MovieDetailsPage = () => {
 
   return (
     <div>
-      <Link to={backLinkHref}>
-        Go Back
-      </Link>
+      <Link to={backLinkHref.current}>Go Back</Link>
       {isLoading && <Loader />}
       {isError && <ErrorMessage />}
       {movieDetails && (
